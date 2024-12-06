@@ -14,19 +14,21 @@
   <main class="signup-container">
     <header>
       <h1>Hedgehog Fan Club!</h1>
-      <h2>Signup now!</h2>
       <h3>Hedgehogs are adorable, nocturnal creatures known for their distinctive spiny coats and curious personalities. When threatened, they curl up into tight balls, using their sharp quills for protection. These small mammals are excellent foragers, feeding on insects, worms, and other small critters. Independent and resilient, hedgehogs captivate with their quiet charm, making them beloved symbols of nature’s gentleness and strength. - ChatGPT</h3>
+      <h2>Signup now!</h2>
+      <span>* means required</span>
     </header>
 
     <form action="" id="signup-form">
       <label for="first-name" aria-required="true">First Name*
-        <input type="text" id="first-name" placeholder="John" required>
+        <input type="text" id="first-name" placeholder="John" minlength="3" maxlength="20" required>
       </label>
       <label for="last-name" aria-required="true">Last Name*
-        <input type="text" id="last-name" placeholder="Doe" required>
+        <input type="text" id="last-name" minlength="3" maxlength="20" placeholder="Doe" required>
       </label>
       <label for="email" aria-required="true">Email*
         <input type="email" id="email" placeholder="john.doe@hedgehog.com" required>
+        <span></span>
       </label>
       <label for="hedgehog" class="hedgehogs">Favourite Hedgehog:
         <select name="hedgehogs" id="hedgehog"></select>
@@ -35,7 +37,7 @@
         
       </select>
       <label for="password" aria-required="true">Password*
-        <input type="password" name="password" id="password" placeholder="hunter2" required>
+        <input type="password" name="password" id="password" placeholder="hunter2" minlength="8" maxlength="20" required>
       </label>
       <label for="confirm-password" aria-required="true">Confirm Password*
         <input type="password" name="confirm-password" id="confirm-password" placeholder="hunter2" required>

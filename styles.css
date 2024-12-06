@@ -10,7 +10,8 @@
   /* color: ligh; */
   --main-color: rgb(71, 110, 71);
   --secondary-color: rgb(71, 110, 71, 0.5);
-  --bg-color: darkgray;
+  --bg-color: rgb(176, 175, 175, 0.9);
+  --secondary-bg-color: rgb(176, 175, 175, 1);
 }
 
 body {
@@ -44,9 +45,13 @@ h1, h2 {
   color: var(--main-color);
 }
 
+h2 {
+  text-decoration: underline;
+}
+
 h3 {
   font-size: 0.8rem;
-  margin-top: 10px;
+  margin-bottom: 20px;
   color: var(--secondary-color);
 }
 
@@ -56,8 +61,7 @@ form {
   flex-wrap: wrap;
   gap: 15px;
   padding: 15px;
-  margin: 20px 10px;
-  border: black solid 2px;
+  background-image: linear-gradient(rgb(176, 175, 175, 0.1), rgb(176, 190, 175, 1.2), rgb(176, 175, 175, 0.1));
 }
 
 form > label {
@@ -72,14 +76,14 @@ form > label {
   width: 95%;
 }
 
-input, select {
+input, select, button {
   font: inherit;
-  padding: 0.1lh;
-  /* color: var(--secondary-color); */
+  padding: 0.1lh 0.2lh;
+  border-radius: 4px;
 }
 
 input::placeholder {
-  opacity: 0.5;
+  opacity: 0.5;  
 }
 
 input:hover, select:hover {
@@ -88,6 +92,29 @@ input:hover, select:hover {
 
 button, select, label {
   cursor: pointer;
+}
+
+button {
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  color: white;
+  margin-left: 15px;
+}
+
+
+
+input:required:user-invalid {
+  border: red 3px solid;
+}
+
+/* input:invalid + span::after {
+  content: 'X';
+  color: red;
+} */
+
+input:focus {
+  outline-offset: 3px;
+  outline-color: purple;
 }
 
 @media screen and (max-width: 1100px) {
