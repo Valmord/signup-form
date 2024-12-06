@@ -74,3 +74,14 @@ submitBut.addEventListener('click', e => {
   }
 })
 
+const inputs = document.querySelectorAll('input');
+inputs.forEach(input => {
+  input.addEventListener( 'keyup', () => {
+    if (input.checkValidity()){
+      if (input === passwordInput || input === confirmPasswordInput) {
+        if (passwordInput.value !== confirmPasswordInput.value) return;
+        passwordInput .nextElementSibling.textContent = '';
+      } else input.nextElementSibling.textContent = '';
+    }
+  })
+})

@@ -9,19 +9,19 @@
 </head>
 <body>
   <div class="side-content">
-    Photo by <a href="https://unsplash.com/@sylvie0n?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sylvie Brindley</a> on <a href="https://unsplash.com/photos/a-hedgehog-walking-through-the-grass-with-a-ball-in-the-background-QvHJ_X59tDY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+    <span>Photo by <a href="https://unsplash.com/@sylvie0n?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sylvie Brindley</a> on <a href="https://unsplash.com/photos/a-hedgehog-walking-through-the-grass-with-a-ball-in-the-background-QvHJ_X59tDY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></span>
   </div>
   <main class="signup-container">
     <header>
       <h1>Hedgehog Fan Club!</h1>
       <h3>Hedgehogs are adorable, nocturnal creatures known for their distinctive spiny coats and curious personalities. When threatened, they curl up into tight balls, using their sharp quills for protection. These small mammals are excellent foragers, feeding on insects, worms, and other small critters. Independent and resilient, hedgehogs captivate with their quiet charm, making them beloved symbols of nature’s gentleness and strength. - ChatGPT</h3>
       <h2>Signup now!</h2>
-      <span>* means required</span>
+      <p>* indicates answers required</p> 
     </header>
 
     <form action="" id="signup-form">
       <label for="first-name" aria-required="true">First Name*
-        <input type="text" id="first-name" placeholder="John" minlength="3" maxlength="20" autocomplete="name" required>
+        <input type="text" id="first-name" placeholder="John" minlength="3" maxlength="20" autocomplete="name" required></input>
         <span class="invalid"></span>
       </label>
       <label for="last-name" aria-required="true">Last Name*
@@ -43,7 +43,7 @@
         <span class="invalid"></span>
       </label>
       <label for="confirm-password" aria-required="true">Confirm Password*
-        <input type="password" name="confirm-password" id="confirm-password" placeholder="hunter2" autocomplete="current-password" required>
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="hunter2" autocomplete="current-password" minlength="8" maxlength="20" required>
       </label>
     </form>
     <button type="submit" form="signup-form">Create Account</button>
