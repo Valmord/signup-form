@@ -21,14 +21,16 @@
 
     <form action="" id="signup-form">
       <label for="first-name" aria-required="true">First Name*
-        <input type="text" id="first-name" placeholder="John" minlength="3" maxlength="20" required>
+        <input type="text" id="first-name" placeholder="John" minlength="3" maxlength="20" autocomplete="name" required>
+        <span class="invalid"></span>
       </label>
       <label for="last-name" aria-required="true">Last Name*
-        <input type="text" id="last-name" minlength="3" maxlength="20" placeholder="Doe" required>
+        <input type="text" id="last-name" minlength="3" maxlength="20" placeholder="Doe" autocomplete="family-name" required>
+        <span class="invalid"></span>
       </label>
       <label for="email" aria-required="true">Email*
-        <input type="email" id="email" placeholder="john.doe@hedgehog.com" required>
-        <span></span>
+        <input type="email" id="email" placeholder="john.doe@hedgehog.com" autocomplete="email" required>
+        <span class="invalid"></span>
       </label>
       <label for="hedgehog" class="hedgehogs">Favourite Hedgehog:
         <select name="hedgehogs" id="hedgehog"></select>
@@ -37,10 +39,11 @@
         
       </select>
       <label for="password" aria-required="true">Password*
-        <input type="password" name="password" id="password" placeholder="hunter2" minlength="8" maxlength="20" required>
+        <input type="password" name="password" id="password" placeholder="hunter2" autocomplete="current-password" minlength="8" maxlength="20" required>
+        <span class="invalid"></span>
       </label>
       <label for="confirm-password" aria-required="true">Confirm Password*
-        <input type="password" name="confirm-password" id="confirm-password" placeholder="hunter2" required>
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="hunter2" autocomplete="current-password" required>
       </label>
     </form>
     <button type="submit" form="signup-form">Create Account</button>

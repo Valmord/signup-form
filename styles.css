@@ -112,6 +112,11 @@ input:required:user-invalid {
   color: red;
 } */
 
+.invalid {
+  color: red;
+}
+
+
 input:focus {
   outline-offset: 3px;
   outline-color: purple;
