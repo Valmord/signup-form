@@ -15,7 +15,7 @@
     <h1>Hedgehog Fan Club!</h1>
     <h2>Signup now!</h2>
 
-    <form action="">
+    <form action="" id="signup-form">
       <label for="first-name" aria-required="true">First Name*
         <input type="text" id="first-name" placeholder="John" required>
       </label>
@@ -25,8 +25,10 @@
       <label for="email" aria-required="true">Email*
         <input type="email" id="email" placeholder="john.doe@hedgehog.com" required>
       </label>
-      <label for="hedgehog">Favourite Hedgehog:</label>
-      <select name="hedgehogs" id="hedgehog">
+      <label for="hedgehog" class="hedgehogs">Favourite Hedgehog:
+        <select name="hedgehogs" id="hedgehog"></select>
+      </label>
+      
         
       </select>
       <label for="password" aria-required="true">Password*
@@ -36,6 +38,8 @@
         <input type="password" name="confirm-password" id="confirm-password" placeholder="hunter2" required>
       </label>
     </form>
+    <button type="submit" form="signup-form">Create Account</button>
+
   </main>
 </body>
 </html>

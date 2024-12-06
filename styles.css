@@ -29,16 +29,34 @@ body {
 form {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
+  padding: 15px;
   margin: 20px 10px;
+  border: black solid 2px;
 }
 
 form > label {
   display: flex;
   flex-direction: column;
+  width: 45%;
 }
 
-@media screen and (max-width: 1000px) {
+.hedgehogs {
+  width: 60%;
+}
+
+@media screen and (max-width: 1100px) {
+  form > label, .hedgehogs {
+    /* flex-direction: row; */
+    width: 95%;
+  }
+
+
+} 
+
+
+
+@media screen and (max-width: 800px) {
   body {
     flex-direction: column;
   }
@@ -47,4 +65,12 @@ form > label {
     flex: 0 0 200px;
     background-position: center;
   }
-}
+
+  form > label {
+    width: 45%;
+  }
+
+  .hedgehogs {
+    width: 60%;
+  }
+} 
