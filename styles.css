@@ -164,7 +164,7 @@ input:user-invalid + span::before {
 
 input:user-valid + span::before {
   position: absolute;
-  top: 24px;
+  top: 25px;
   right: 10px;
   content: '\2713';
   font-size: 1rem;
