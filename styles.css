@@ -15,12 +15,13 @@
 }
 
 body {
-    display: flex;
+  display: flex;
   flex-direction: row;
-  height: 100vh;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
   font-size: 16px;
+  position: relative;
 }
 
 .side-content {
@@ -79,22 +80,53 @@ form {
   background-image: linear-gradient(rgb(176, 175, 175, 0.1), rgb(176, 190, 175, 1.2), rgb(176, 175, 175, 0.1));
 }
 
-form > label {
-  display: flex;
-  flex-direction: column;
+ul {
   width: 46.3%;
   color: var(--main-color);
   font-weight: bold;
+  list-style: none;
+  position: relative;
+
+
+  & li > input, & li > select {
+    width: 100%;
+  }
 }
 
-.hedgehogs {
+.hedgehogs, .email {
   width: 95%;
 }
 
-input, select, button {
+input, select {
   font: inherit;
-  padding: 0.1lh 0.2lh;
+  padding: 0.1lh 1lh 0.1lh 0.2lh;
   border-radius: 4px;
+}
+
+button {
+  font: inherit;
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  color: white;
+  margin-left: 15px;
+  padding: 0.2lh 0.4lh;
+  border-radius: 4px;
+  box-shadow: #287b3a 2px 2px 3px;
+}
+
+button:active {
+  position: relative;
+  top: 2px;
+  left: 3px;
+  box-shadow: none;
+}
+
+a {
+  color: var(--main-color);
+}
+
+p {
+  margin: 10px 15px;
 }
 
 input::placeholder {
@@ -103,39 +135,45 @@ input::placeholder {
 
 input:hover, select:hover {
   opacity: 0.85;
+  outline: 2px purple solid;
+  outline-offset: 2px;
 }
 
 button, select, label {
   cursor: pointer;
 }
 
-button {
-  font-weight: bold;
-  background-color: var(--secondary-color);
-  color: white;
-  margin-left: 15px;
-}
-
 
 
 input:required:user-invalid {
-  border: red 3px solid;
+  border: red 2px solid;
   background-color: rgb(255, 141, 141,0.5); 
 }
 
-input:valid {
+input:valid, select {
   background-color: rgb(141, 234, 141,0.5);
 }
 
-input:invalid::after {
+input:user-invalid + span::before {
+  position: absolute;
+  top: 28px;
+  right: 10px;
   content: 'X';
   color: red;
+}
+
+input:user-valid + span::before {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  content: '\2713';
+  font-size: 1rem;
+  color: green;
 }
 
 .invalid {
   color: red;
 }
-
 
 input:focus {
   outline-offset: 3px;
@@ -143,7 +181,7 @@ input:focus {
 }
 
 @media screen and (max-width: 1100px) {
-  form > label {
+  ul {
     /* flex-direction: row; */
     width: 95%;
   }
@@ -163,7 +201,7 @@ input:focus {
     background-position: center;
   }
 
-  form > label {
-    width: 45%;
+  ul {
+    width: 46.3%;
   }
 } 
